@@ -16,20 +16,20 @@ class Board{
 
     public:
         Board(Pieces* pieces, int screenHeight);
-        int getXPosInPixels(int pPos);
-        int getYPosInPixels(int pPos);
-        bool isFreeBlock(int pX, int pY);
-        bool isPossibleMovement(int pX, int pY, int pPiece, int pRotation);
-        void storePiece(int pX, int pY, int pPiece, int pRotation);
+        int getXPosInPixels(int pos);
+        int getYPosInPixels(int pos);
+        bool isFreeBlock(int x, int y);
+        bool isPossibleMovement(int x, int y, int piece, int rotation);
+        void storePiece(int x, int y, int piece, int rotation);
         void deletePossibleLines();
         bool isGameOver();
 
     private:
         enum { POS_FREE, POS_FILLED };
-        int mBoard[BOARD_WIDTH][BOARD_HEIGHT]; // Board that contains the pieces
-        Pieces *mPieces;
-        int mScreenHeight;
+        int board[BOARD_WIDTH][BOARD_HEIGHT]; // Board that contains the pieces
+        Pieces *pieces;
+        int screenHeight;
         void initBoard();
-        void deleteLine (int pY);
+        void deleteLine(int pY);
 };
 #endif

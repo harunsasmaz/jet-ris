@@ -2,7 +2,7 @@
 #define _PIECES_
 
 // Pieces definition
-char mPieces [7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ] =
+char pieces[7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* vertical blocks */ ] =
 {
 // Square
   {
@@ -229,7 +229,7 @@ char mPieces [7 /*kind */ ][4 /* rotation */ ][5 /* horizontal blocks */ ][5 /* 
 };
 
 // Displacement of the piece to the position where it is first drawn in the board when it is created
-int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
+int piecesInitialPosition[7 /*kind */ ][4 /* r2otation */ ][2 /* position */] =
 {
 /* Square */
   {
@@ -284,9 +284,9 @@ int mPiecesInitialPosition  [7 /*kind */ ][4 /* r2otation */ ][2 /* position */]
 
 class Pieces {
     public:
-        int getBlockType        (int pPiece, int pRotation, int pX, int pY);
-        int getXInitialPosition (int pPiece, int pRotation);
-        int getYInitialPosition (int pPiece, int pRotation);
+        int getBlockType        (int piece, int rotation, int x, int y);
+        int getXInitialPosition (int piece, int rotation);
+        int getYInitialPosition (int piece, int rotation);
 };
 
 #endif
