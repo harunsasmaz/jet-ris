@@ -29,7 +29,7 @@ private:
  
     Board *mBoard;
     Pieces *mPieces;
-    //IO *mIO;
+    IO *io;
  
     int getRand(int lower, int upper);
     void initGame();
