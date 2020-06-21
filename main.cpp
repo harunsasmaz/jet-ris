@@ -1,6 +1,12 @@
 #include "game.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int _main()
+#ifdef __cplusplus
+extern "C"
+#endif
+
+int main(int argc, char* argv[])
 {
     IO io;
     int screenHeight = io.getScreenHeight();
@@ -22,23 +28,37 @@ int _main()
         switch (key)
         {
             case SDLK_RIGHT:
-                /* code */
+                if (board.isPossibleMovement(game.posX + 1, game.posY, game.piece, game.rotation))
+                    game.posX++;
                 break;
 
             case SDLK_LEFT:
-                /* code */
+                if (board.isPossibleMovement(game.posX - 1, game.posY, game.piece, game.rotation))
+                    game.posX--;
                 break;
             
             case SDLK_DOWN:
-                /* code */
+                if (board.isPossibleMovement(game.posX, game.posY + 1, game.piece, game.rotation))
+                    game.posY++;
                 break;
             
             case SDLK_x:
-                /* code */
+                while (board.isPossibleMovement(game.posX, game.posY, game.piece, game.rotation)) 
+                    game.posY++;
+ 
+                board.storePiece (game.posX, game.posY - 1, game.piece, game.rotation);
+                board.deletePossibleLines();
+                if (board.isGameOver())
+                {
+                    io.getkey();
+                    exit(0);
+                }
+                game.createNewPiece();
                 break;
             
             case SDLK_z:
-                /* code */
+                if (board.isPossibleMovement(game.posX, game.posY, game.piece, (game.rotation + 1) % 4))
+                    game.rotation = (game.rotation + 1) % 4;
                 break;
 
             default:
