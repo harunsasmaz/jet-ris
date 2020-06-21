@@ -1,5 +1,13 @@
 #include "game.h"
 
+Game::Game(Board* board, Pieces* pieces, IO* io, int screenHeight)
+{
+    this->io = io;
+    this->mBoard = board;
+    this->mPieces = pieces;
+    this->screenHeight = screenHeight;
+}
+
 int Game::getRand(int low, int high)
 {
     return rand() % (high - low + 1) + low;

@@ -1,5 +1,11 @@
 #include "board.h"
 
+Board::Board(Pieces* pieces, int screenHeight)
+{
+    this->pieces = pieces;
+    this->screenHeight = screenHeight;
+}
+
 void Board::initBoard()
 {
     for(int i = 0; i < BOARD_WIDTH; ++i)

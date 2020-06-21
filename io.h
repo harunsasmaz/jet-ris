@@ -1,4 +1,4 @@
-#ifndef __IO_
+#ifndef _IO_
 #define _IO_
 
 #include "SDL/include/SDL.h"                            
