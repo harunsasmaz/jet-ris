@@ -1,6 +1,6 @@
 CC=g++
-CFLAGS= -c -DLINUX -I. -LSDL/lib
-LDFLAGS= -lSDL -lSDL_gfx
+CFLAGS= -c -I include
+LDFLAGS= -I include -L lib -lSDL -lSDL_gfx
 SOURCES= main.cpp game.cpp board.cpp io.cpp pieces.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=tetris

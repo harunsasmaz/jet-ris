@@ -2,12 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifdef __cplusplus
-extern "C"
-#endif
-
-int main(int argc, char* argv[])
+int main(int argc, char** argv)
 {
+    SDL_Init(SDL_INIT_VIDEO);
     IO io;
     int screenHeight = io.getScreenHeight();
 
