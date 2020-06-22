@@ -1,6 +1,12 @@
 # Tetris
 
-A simple tetris game built with SDL
+<table border="0">
+ <tr>
+    <td><img src="assets/game.png" height="256px"> </td>
+    <td>A very simple tetris game built with SDL library</td>
+ </tr>
+</table>
+
 
 ## Dependencies
 
@@ -19,8 +25,13 @@ A simple tetris game built with SDL
 ## Gameplay
 
 <kbd>Z</kbd> Rotate piece
+
 <kbd>X</kbd> Drop piece
+
 <kbd>Left</kbd> Move piece to left
+
 <kbd>Right</kbd> Move piece to right
+
 <kbd>Down</kbd> Move piece to down
+
 <kbd>Esc</kbd> Quit game
